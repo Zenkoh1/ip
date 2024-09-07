@@ -36,6 +36,8 @@ public class Ui {
         mainWindow.setBobbyBot(bobbyBot);
         printResponse("Hello! I'm " + bobbyBot.getName() + "\nWhat can I do for you?");
         this.stage.show();
+
+        assert this.stage.isShowing();
     }
 
     /**
@@ -46,6 +48,8 @@ public class Ui {
         PauseTransition delay = new PauseTransition(Duration.seconds(2));
         delay.setOnFinished(event -> stage.close());
         delay.play();
+
+        assert !stage.isShowing();
     }
 
     /**

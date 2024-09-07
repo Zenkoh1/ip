@@ -28,6 +28,8 @@ public class BobbyBot {
             ui.printResponse("Error reading from file. Starting with an empty task list.");
             tasks = new TaskList();
         }
+
+        assert tasks != null;
     }
 
     /**

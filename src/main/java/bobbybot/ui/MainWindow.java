@@ -67,6 +67,8 @@ public class MainWindow extends AnchorPane {
      */
     @FXML
     private void handleUserInput() {
+        assert userInput != null;
+
         String input = userInput.getText();
         dialogContainer.getChildren().addAll(
                 DialogBox.getUserDialog(input, userImage)
